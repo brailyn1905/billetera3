@@ -161,7 +161,7 @@
             PanelCentral.Size = new Size(790, 524);
             PanelCentral.TabIndex = 2;
             // 
-            // Form1
+            // Inicio
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -170,7 +170,8 @@
             Controls.Add(panelVertical);
             Controls.Add(BarraTitulo);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Form1";
+            Name = "Inicio";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();

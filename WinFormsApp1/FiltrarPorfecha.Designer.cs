@@ -171,6 +171,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FiltrarPorfecha";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FiltrarPorfecha";
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
