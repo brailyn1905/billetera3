@@ -19,6 +19,7 @@ namespace Capa_Presentacion
         public RegistrarIngreso()
         {
             InitializeComponent();
+            dateTimefecha.MaxDate = DateTime.Today;
         }
 
 

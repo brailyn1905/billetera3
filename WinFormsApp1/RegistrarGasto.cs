@@ -17,6 +17,7 @@ namespace Capa_Presentacion
         public RegistrarGasto()
         {
             InitializeComponent();
+            dateTimefecha.MaxDate = DateTime.Today;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -72,6 +73,18 @@ namespace Capa_Presentacion
                 MessageBox.Show("Error al registrar el gasto: " + ex.Message);
             }
 
+            LimpiarCampos();
+        }
+
+
+
+
+        private void LimpiarCampos()
+        {
+            textmonto.Clear();
+            textmotivo.Clear();
+
         }
     }
+
 }

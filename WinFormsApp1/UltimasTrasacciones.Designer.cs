@@ -44,7 +44,9 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(12, 165);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(522, 178);
             dataGridView1.TabIndex = 0;
             // 
@@ -63,6 +65,7 @@
             textSaldoActual.BackColor = SystemColors.ScrollBar;
             textSaldoActual.Location = new Point(223, 421);
             textSaldoActual.Name = "textSaldoActual";
+            textSaldoActual.ReadOnly = true;
             textSaldoActual.Size = new Size(248, 27);
             textSaldoActual.TabIndex = 2;
             // 

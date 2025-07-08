@@ -125,6 +125,7 @@
             // 
             // comboBoxFiltro
             // 
+            comboBoxFiltro.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxFiltro.FormattingEnabled = true;
             comboBoxFiltro.Location = new Point(159, 260);
             comboBoxFiltro.Name = "comboBoxFiltro";
@@ -136,7 +137,9 @@
             dataGridViewTransacciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewTransacciones.Location = new Point(30, 364);
             dataGridViewTransacciones.Name = "dataGridViewTransacciones";
+            dataGridViewTransacciones.ReadOnly = true;
             dataGridViewTransacciones.RowHeadersWidth = 51;
+            dataGridViewTransacciones.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewTransacciones.Size = new Size(490, 124);
             dataGridViewTransacciones.TabIndex = 8;
             // 
