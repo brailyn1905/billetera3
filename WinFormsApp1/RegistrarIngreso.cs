@@ -57,25 +57,8 @@ namespace Capa_Presentacion
 
                 // Crear la transacción (ejemplo: ingreso)
                 Transaccion transaccion = new Ingreso(0, monto, fecha, motivo);
+                MessageBox.Show("Transacción registrada exitosamente.");
 
-                // Obtener el saldo actual desde la clase lógica
-                decimal saldoActual = Transaccion.ObtenerSaldoActual();
-
-                if (transaccion.ValidarSaldo(saldoActual))
-                {
-                    // Insertar en la base de datos
-                    TransaccionDatos datos = new TransaccionDatos();
-                    datos.InsertarTransaccion(transaccion);
-
-                    MessageBox.Show("Transacción registrada exitosamente.");
-
-            
-     
-                }
-                else
-                {
-                    MessageBox.Show("Saldo insuficiente para registrar la transacción.");
-                }
             }
             catch (Exception ex)
             {

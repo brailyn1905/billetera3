@@ -31,10 +31,13 @@ namespace Capa_Presentacion
 
             // Calcular el último día del mes pasado
             DateTime ultimoDiaMesPasado = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddDays(-1);
+
             // Establecer límites para dateTimePickerDesde
             dateTimePickerDesde.MinDate = primerDiaMesPasado;
             dateTimePickerDesde.MaxDate = DateTime.Today;
             dateTimePickerDesde.Value = primerDiaMesPasado;
+
+
             // Establecer límites para dateTimePickerHasta
             dateTimePickerHasta.MinDate = primerDiaMesPasado;
             dateTimePickerHasta.MaxDate = DateTime.Today;
@@ -77,7 +80,7 @@ namespace Capa_Presentacion
                 {
                     dt.Rows.Add(t.Id, t.Monto, t.Fecha, t.Motivo, t.Tipo);
                 }
-
+                //se presenta los valores de la tabla en el datagridview para que en usuario lo vea 
                 dataGridViewTransacciones.DataSource = dt;
             }
             catch (Exception ex)
