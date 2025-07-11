@@ -18,7 +18,7 @@ namespace Capa_Negocios
 
         public abstract string Tipo { get; }
 
-        // Constructor
+        // Constructor; el protecte significa que Solo puede ser usado desde clases hijas (no desde fuera).
         protected Transaccion(int id, decimal monto, DateTime fecha, string motivo)
         {
             Id = id;
@@ -79,37 +79,7 @@ namespace Capa_Negocios
 
 
 
-        public static List<Transaccion> ObtenerTodas()
-        {
-            List<Transaccion> lista = new List<Transaccion>();
-            ConexionDatos conexionClase = new ConexionDatos();
-
-            using (SqlConnection conexion = new SqlConnection(conexionClase.Conexion))
-            {
-                string consulta = "SELECT Id, Monto, Fecha, Motivo, Tipo FROM Transaccion";
-                SqlCommand comando = new SqlCommand(consulta, conexion);
-
-                conexion.Open();
-                SqlDataReader reader = comando.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    int id = Convert.ToInt32(reader["Id"]);
-                    decimal monto = Convert.ToDecimal(reader["Monto"]);
-                    DateTime fecha = Convert.ToDateTime(reader["Fecha"]);
-                    string motivo = reader["Motivo"].ToString();
-                    string tipo = reader["Tipo"].ToString();
-
-                    Transaccion transaccion = tipo == "Ingreso"
-                        ? new Ingreso (id, monto, fecha, motivo)
-                        : new Gasto (id, monto, fecha, motivo);
-
-                    lista.Add(transaccion);
-                }
-            }
-
-            return lista;
-        }
+       
 
 
         public static List<Transaccion> FiltrarPorTipoYFechas(string tipo, DateTime fechaDesde, DateTime fechaHasta)

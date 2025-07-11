@@ -17,9 +17,16 @@ namespace Capa_Presentacion
         public RegistrarGasto()
         {
             InitializeComponent();
+            // Fecha máxima: hoy
             dateTimefecha.MaxDate = DateTime.Today;
+
+            // Fecha mínima: primer día del mes pasado
+            DateTime primerDiaMesPasado = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddMonths(-1);
+            dateTimefecha.MinDate = primerDiaMesPasado;
+
         }
 
+       
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -77,14 +84,14 @@ namespace Capa_Presentacion
         }
 
 
-
-
         private void LimpiarCampos()
         {
             textmonto.Clear();
             textmotivo.Clear();
 
         }
+
+       
     }
 
 }

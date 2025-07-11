@@ -57,7 +57,7 @@ namespace Capa_Presentacion
             {
                 if (tipo == "Todos")
                 {
-                    // Si quieres, crear otro método para filtrar solo por fechas
+                    
                     lista = Transaccion.FiltrarPorFechas(fechaDesde, fechaHasta);
                 }
                 else
@@ -95,5 +95,6 @@ namespace Capa_Presentacion
         {
             CargarTransacciones();
         }
+        
     }
 }

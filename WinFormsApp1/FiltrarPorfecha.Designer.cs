@@ -49,9 +49,9 @@
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Dock = DockStyle.Right;
-            panel1.Location = new Point(540, 0);
+            panel1.Location = new Point(561, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(250, 524);
+            panel1.Size = new Size(228, 512);
             panel1.TabIndex = 0;
             // 
             // panel2
@@ -61,7 +61,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(540, 125);
+            panel2.Size = new Size(561, 125);
             panel2.TabIndex = 1;
             // 
             // label1
@@ -158,7 +158,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 62, 99);
-            ClientSize = new Size(790, 524);
+            ClientSize = new Size(789, 512);
             Controls.Add(btnFiltrar);
             Controls.Add(dataGridViewTransacciones);
             Controls.Add(comboBoxFiltro);

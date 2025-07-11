@@ -20,10 +20,15 @@ namespace Capa_Presentacion
         {
             InitializeComponent();
             dateTimefecha.MaxDate = DateTime.Today;
+
+            // Fecha mínima: primer día del mes pasado
+            DateTime primerDiaMesPasado = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddMonths(-1);
+            dateTimefecha.MinDate = primerDiaMesPasado;
+
         }
 
 
-       
+
         private void button1_Click(object sender, EventArgs e)
         {
             try

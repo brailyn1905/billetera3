@@ -25,7 +25,7 @@ namespace Capa_Presentacion
         {
             try
             {
-                decimal saldo = Transaccion.ObtenerSaldoActual(); // o TransaccionDatos.ObtenerSaldoActual()
+                decimal saldo = Transaccion.ObtenerSaldoActual(); 
                 textSaldoActual.Text = "Saldo actual: $" + saldo.ToString("N2");
             }
             catch (Exception ex)
